@@ -1,23 +1,38 @@
------------------------
-
 # ACF Random String Field
 
-ACF v4 field to generate a random string.
+ACF v5 field to generate a random 6 digit string and save it to a hidden field.
+We use this to give our rows/bricks or page-blocks indidiual ID's.
+
+_Note:_ This plugin was original create by [hcmedia](https://github.com/hcmedia/acf-field-randomstring).
 
 -----------------------
 
 ### Compatibility
 
 This ACF field type is compatible with:
-* ACF 4
+* ACF 5
 
-### Installation
 
-1. Copy the `acf-field-randomstring` folder into your `wp-content/plugins` folder
-2. Activate the Random String plugin via the plugins admin page
-3. Create a new field via ACF and select the Random String type
-4. Please refer to the description for more info regarding the field type settings
+##### Install with Composer
 
-### Changelog
-Please see `readme.txt` for changelog
-# acf-field-randomstring
+1. Extend your `composer.json`
+```javascript
+{
+  "repositories": {
+        "acf-field-randomstring": {
+            "type": "vcs",
+            "url": "git@github.com:macherjek1/acf-field-randomstring.git"
+        }
+    },
+    "require": {
+      "macherjek1/acf-field-randomstring": "~2.0.0"
+    }
+  }
+}
+```
+
+### Release History
+
+* 0.0.3
+  * Bugfixes
+  * Composer Support
